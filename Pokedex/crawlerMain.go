@@ -13,7 +13,7 @@ import (
 
 func main() {
 	// Make a GET request to the WEBTOON homepage
-	resp, err := http.Get("https://pokedex.org/")
+	resp, err := http.Get("https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_effort_value_yield_in_Generation_IX")
 	if err != nil {
 		fmt.Println("Error fetching pokedex homepage:", err)
 		return
@@ -36,7 +36,7 @@ func main() {
 
 	values := findParagraphs(doc)
 	// Save links to a JSON file
-	err = saveLinksToJSON(values, "pokemons.json")
+	err = saveLinksToJSON(values, "pokedex.json")
 	if err != nil {
 		fmt.Println("Error saving links to JSON:", err)
 	} else {
@@ -49,17 +49,16 @@ func findParagraphs(n *html.Node) []string {
 	var walk func(n *html.Node)
 	walk = func(n *html.Node) {
 		// Check if the node is a <p> tag
-		if n.Type == html.ElementNode && n.Data == "ul" {
-			// Check for class="subj"
-			for _, attr := range n.Attr {
-				if attr.Key == "id" && attr.Val == "monsters-list" {
-					// Get the content inside the <p> tag
-					content := getTextContent(n)
-					fmt.Println(" ", content)
-					values = append(values, content)
-					break
-				}
-			}
+		if n.Type == html.ElementNode && n.Data == "td" {
+			// for _, attr := range n.Attr {
+			// 	if attr.Key == "id" && attr.Val == "monsters-list" {
+			// Get the content inside the <p> tag
+			content := getTextContent(n)
+			fmt.Println(" ", content)
+			values = append(values, content)
+			// break
+			// 	}
+			// }
 		}
 		// Recursively walk through child nodes
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
