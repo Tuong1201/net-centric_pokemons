@@ -7,9 +7,23 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strings"
 
 	"golang.org/x/net/html"
 )
+
+type Newpokemons struct {
+	Id        string `json:"id"`
+	Name      string `json:"name"`
+	Exp       string `json:"exp"`
+	HP        string `json:"hp"`
+	Attack    string `json:"attack"`
+	Defense   string `json:"defense"`
+	SpAttack  string `json:"sp_attack"`
+	SpDefense string `json:"sp_defense"`
+	Speed     string `json:"speed"`
+	TotalEVs  string `json:"total_evs"`
+}
 
 func main() {
 	// Make a GET request to the WEBTOON homepage
@@ -33,14 +47,34 @@ func main() {
 		fmt.Println("Error parsing HTML:", err)
 		return
 	}
-
+	var pokemons []Newpokemons
+	var newValues []string
 	values := findParagraphs(doc)
+	for i := 0; i < (len(values) - 30); i += 11 {
+		newValues = append(newValues, values[i], values[i+2], values[i+3], values[i+4], values[i+5], values[i+6], values[i+7], values[i+8], values[i+9], values[i+10])
+	}
+	
+	for i := 0; i < len(newValues); i += 10 {
+		pokemons = append(pokemons, Newpokemons{
+			Id:        newValues[i],
+			Name:      newValues[i+1],
+			Exp:       newValues[i+2],
+			HP:        newValues[i+3],
+			Attack:    newValues[i+4],
+			Defense:   newValues[i+5],
+			SpAttack:  newValues[i+6],
+			SpDefense: newValues[i+7],
+			Speed:     newValues[i+8],
+			TotalEVs:  newValues[i+9],
+		})
+	}
+	fmt.Println("len=", len(newValues))
 	// Save links to a JSON file
-	err = saveLinksToJSON(values, "pokedex.json")
+	err = saveLinksToJSON(pokemons, "pokedex.json")
 	if err != nil {
 		fmt.Println("Error saving links to JSON:", err)
 	} else {
-		fmt.Println("Links successfully saved to pokemons.json")
+		fmt.Println("Links successfully saved to pokedex.json")
 	}
 }
 
@@ -48,17 +82,11 @@ func findParagraphs(n *html.Node) []string {
 	var values []string
 	var walk func(n *html.Node)
 	walk = func(n *html.Node) {
-		// Check if the node is a <p> tag
 		if n.Type == html.ElementNode && n.Data == "td" {
-			// for _, attr := range n.Attr {
-			// 	if attr.Key == "id" && attr.Val == "monsters-list" {
-			// Get the content inside the <p> tag
 			content := getTextContent(n)
-			fmt.Println(" ", content)
-			values = append(values, content)
-			// break
-			// 	}
-			// }
+			if content != "" || content != "\n" {
+				values = append(values, content)
+			}
 		}
 		// Recursively walk through child nodes
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
@@ -66,24 +94,25 @@ func findParagraphs(n *html.Node) []string {
 		}
 	}
 	walk(n)
-	return values
+	var result []string
+	result = values[1:]
+	return result
 }
 
 // Function to get the text content of a node
 func getTextContent(n *html.Node) string {
 	if n.Type == html.TextNode {
-		return n.Data
+		return strings.TrimSpace(n.Data)
 	}
 	var content string
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
 		content += getTextContent(c)
-		content += " "
 	}
 	return content
 }
 
 // Function to save links to a JSON file
-func saveLinksToJSON(links []string, filename string) error {
+func saveLinksToJSON(links []Newpokemons, filename string) error {
 	// Open or create the JSON file
 	file, err := os.Create(filename)
 	if err != nil {
