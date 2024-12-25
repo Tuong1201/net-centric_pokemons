@@ -52,3 +52,15 @@ func ReadJSONFile(filename string, target interface{}) error {
 
 	return nil
 }
+func saveLinksToJSON(links []Pokemons, filename string) error {
+	file, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	// Encode links as JSON and write to the file
+	encoder := json.NewEncoder(file)
+	encoder.SetIndent("", "  ") // Add indentation for better readability
+	return encoder.Encode(links)
+}

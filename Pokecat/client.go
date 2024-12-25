@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"net"
@@ -32,7 +33,20 @@ func main() {
 		os.Exit(1)
 	}
 	defer conn.Close()
+	//
 	fmt.Println("Connected to server")
+	reader := bufio.NewReader(os.Stdin)
+	serverReader := bufio.NewReader(conn)
+	fmt.Print("Enter player coordinate x: ")
+	playerX, _ := reader.ReadString('\n')
+	conn.Write([]byte(playerX + "\n"))
+
+	fmt.Print("Enter player coordinate x: ")
+	playerY, _ := reader.ReadString('\n')
+	conn.Write([]byte(playerY + "\n"))
+
+	authResponse, _ := serverReader.ReadString('\n')
+	fmt.Print("Server: " + authResponse)
 	//
 	var pokemon []Pokemons
 	decoder := json.NewDecoder(conn)
@@ -40,8 +54,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Error decoding JSON:", err)
 		return
-	}
-	for _, msg := range pokemon {
-		fmt.Printf("Id=%s", msg.Id)
 	}
 }

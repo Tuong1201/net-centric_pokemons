@@ -53,7 +53,7 @@ func main() {
 	for i := 0; i < (len(values) - 30); i += 11 {
 		newValues = append(newValues, values[i], values[i+2], values[i+3], values[i+4], values[i+5], values[i+6], values[i+7], values[i+8], values[i+9], values[i+10])
 	}
-	
+
 	for i := 0; i < len(newValues); i += 10 {
 		pokemons = append(pokemons, Newpokemons{
 			Id:        newValues[i],
@@ -113,7 +113,6 @@ func getTextContent(n *html.Node) string {
 
 // Function to save links to a JSON file
 func saveLinksToJSON(links []Newpokemons, filename string) error {
-	// Open or create the JSON file
 	file, err := os.Create(filename)
 	if err != nil {
 		return err
