@@ -23,8 +23,8 @@ type Pokemons struct {
 	TotalEVs  string `json:"total_evs"`
 }
 type coordinate struct {
-	x int `json:"x"`
-	y int `json:"y"`
+	X int `json:"x"`
+	Y int `json:"y"`
 }
 
 func PlayerDb(player1 Player, player2 Player, player3 Player) (Player, Player, Player) {
@@ -32,24 +32,24 @@ func PlayerDb(player1 Player, player2 Player, player3 Player) (Player, Player, P
 		Username: "player1",
 		Password: "123",
 		Coordinate: coordinate{
-			x: rand.IntN(1000),
-			y: rand.IntN(1000),
+			X: rand.IntN(1000),
+			Y: rand.IntN(1000),
 		},
 	}
 	player2 = Player{
 		Username: "player2",
 		Password: "123",
 		Coordinate: coordinate{
-			x: rand.IntN(1000),
-			y: rand.IntN(1000),
+			X: rand.IntN(1000),
+			Y: rand.IntN(1000),
 		},
 	}
 	player3 = Player{
 		Username: "player3",
 		Password: "123",
 		Coordinate: coordinate{
-			x: rand.IntN(1000),
-			y: rand.IntN(1000),
+			X: rand.IntN(1000),
+			Y: rand.IntN(1000),
 		},
 	}
 	return player1, player2, player3
