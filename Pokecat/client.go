@@ -37,11 +37,52 @@ func main() {
 	fmt.Println("Connected to server")
 	reader := bufio.NewReader(os.Stdin)   //Read from user
 	serverReader := bufio.NewReader(conn) //Read from Server
-	fmt.Print("Which players do you want to play: ")
-	player, _ := reader.ReadString('\n')
-	conn.Write([]byte(strings.TrimSpace(player) + "\n"))
-
+	//Valid username and password
+	fmt.Print("Enter username: ")
+	username, _ := reader.ReadString('\n')
+	conn.Write([]byte(strings.TrimSpace(username) + "\n"))
+	fmt.Print("Enter password: ")
+	password, _ := reader.ReadString('\n')
+	conn.Write([]byte(strings.TrimSpace(password) + "\n"))
 	authResponse, _ := serverReader.ReadString('\n')
 	fmt.Print("Server: " + authResponse)
+	//
+	for {
+		fmt.Printf("Your current position: \n")
+		Xresponse, _ := serverReader.ReadString('\n')
+		fmt.Print("X= ", Xresponse)
+
+		Yresponse, _ := serverReader.ReadString('\n')
+		fmt.Print("Y= ", Yresponse)
+
+		//Enter Player X and Y
+		XMessage, _ := serverReader.ReadString('\n')
+		fmt.Print("Server: " + XMessage)
+		X, _ := reader.ReadString('\n')
+
+		if strings.TrimSpace(X) == "stop" {
+			fmt.Println("Game over. Exiting.")
+			break
+		}
+
+		conn.Write([]byte(strings.TrimSpace(X) + "\n"))
+		//
+		YMessage, _ := serverReader.ReadString('\n')
+		fmt.Print("Server: " + YMessage)
+		Y, _ := reader.ReadString('\n')
+
+		if strings.TrimSpace(Y) == "stop" {
+			fmt.Println("Game over. Exiting.")
+			break
+		}
+
+		conn.Write([]byte(strings.TrimSpace(Y) + "\n"))
+		Response, _ := serverReader.ReadString('\n')
+		fmt.Print("Server Response: " + Response + "\n")
+
+		CapResponse, _ := serverReader.ReadString('\n')
+		fmt.Print("Server Response: pokemons Capture " + CapResponse)
+
+	}
 
 }

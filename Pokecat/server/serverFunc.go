@@ -7,6 +7,16 @@ import (
 	"os"
 )
 
+type NewPlayer struct {
+	Username         string              `json:"username"`
+	Password         string              `json:"password"`
+	PlayerCoordinate NewPlayerCoordinate `json:"coordinate"`
+	CapturedPokemons []string            `json:"captured_pokemons"`
+}
+type NewPlayerCoordinate struct {
+	PlayerX int `json:"x"`
+	PlayerY int `json:"y"`
+}
 type Pokemons struct {
 	Id          string     `json:"id"`
 	Name        string     `json:"name"`

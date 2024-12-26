@@ -5,10 +5,14 @@ import (
 )
 
 type Player struct {
-	Username         string     `json:"username"`
-	Password         string     `json:"password"`
-	Coordinate       coordinate `json:"coordinate"`
-	CapturedPokemons []Pokemons `json:"captured_pokemons"`
+	Username         string           `json:"username"`
+	Password         string           `json:"password"`
+	PlayerCoordinate PlayerCoordinate `json:"coordinate"`
+	CapturedPokemons []Pokemons       `json:"captured_pokemons"`
+}
+type PlayerCoordinate struct {
+	PlayerX int `json:"x"`
+	PlayerY int `json:"y"`
 }
 type Pokemons struct {
 	Id        string `json:"id"`
@@ -31,25 +35,25 @@ func PlayerDb(player1 Player, player2 Player, player3 Player) (Player, Player, P
 	player1 = Player{
 		Username: "player1",
 		Password: "123",
-		Coordinate: coordinate{
-			X: rand.IntN(1000),
-			Y: rand.IntN(1000),
+		PlayerCoordinate: PlayerCoordinate{
+			PlayerX: rand.IntN(1000),
+			PlayerY: rand.IntN(1000),
 		},
 	}
 	player2 = Player{
 		Username: "player2",
 		Password: "123",
-		Coordinate: coordinate{
-			X: rand.IntN(1000),
-			Y: rand.IntN(1000),
+		PlayerCoordinate: PlayerCoordinate{
+			PlayerX: rand.IntN(1000),
+			PlayerY: rand.IntN(1000),
 		},
 	}
 	player3 = Player{
 		Username: "player3",
 		Password: "123",
-		Coordinate: coordinate{
-			X: rand.IntN(1000),
-			Y: rand.IntN(1000),
+		PlayerCoordinate: PlayerCoordinate{
+			PlayerX: rand.IntN(1000),
+			PlayerY: rand.IntN(1000),
 		},
 	}
 	return player1, player2, player3
