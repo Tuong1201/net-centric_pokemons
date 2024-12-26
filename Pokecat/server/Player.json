@@ -1,0 +1,12 @@
+{
+  "username": "player2",
+  "password": "123",
+  "coordinate": {
+    "x": 34,
+    "y": 12
+  },
+  "captured_pokemons": [
+    "Fomantis",
+    "Ho-Oh"
+  ]
+}

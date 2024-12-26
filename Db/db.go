@@ -8,7 +8,7 @@ type Player struct {
 	Username         string           `json:"username"`
 	Password         string           `json:"password"`
 	PlayerCoordinate PlayerCoordinate `json:"coordinate"`
-	CapturedPokemons []Pokemons       `json:"captured_pokemons"`
+	CapturedPokemons []string         `json:"captured_pokemons"`
 }
 type PlayerCoordinate struct {
 	PlayerX int `json:"x"`
@@ -31,8 +31,8 @@ type coordinate struct {
 	Y int `json:"y"`
 }
 
-func PlayerDb(player1 Player, player2 Player, player3 Player) (Player, Player, Player) {
-	player1 = Player{
+func PlayerDb() (Player, Player, Player) {
+	player1 := Player{
 		Username: "player1",
 		Password: "123",
 		PlayerCoordinate: PlayerCoordinate{
@@ -40,7 +40,7 @@ func PlayerDb(player1 Player, player2 Player, player3 Player) (Player, Player, P
 			PlayerY: rand.IntN(1000),
 		},
 	}
-	player2 = Player{
+	player2 := Player{
 		Username: "player2",
 		Password: "123",
 		PlayerCoordinate: PlayerCoordinate{
@@ -48,7 +48,7 @@ func PlayerDb(player1 Player, player2 Player, player3 Player) (Player, Player, P
 			PlayerY: rand.IntN(1000),
 		},
 	}
-	player3 = Player{
+	player3 := Player{
 		Username: "player3",
 		Password: "123",
 		PlayerCoordinate: PlayerCoordinate{

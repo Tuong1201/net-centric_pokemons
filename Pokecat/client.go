@@ -44,45 +44,46 @@ func main() {
 	fmt.Print("Enter password: ")
 	password, _ := reader.ReadString('\n')
 	conn.Write([]byte(strings.TrimSpace(password) + "\n"))
+	//
 	authResponse, _ := serverReader.ReadString('\n')
 	fmt.Print("Server: " + authResponse)
 	//
+
+	fmt.Printf("Your current position: \n")
+	Xresponse, _ := serverReader.ReadString('\n')
+	fmt.Print("X= ", Xresponse)
+	Yresponse, _ := serverReader.ReadString('\n')
+	fmt.Print("Y= ", Yresponse)
+
+	AuthMess, _ := serverReader.ReadString('\n')
+	if strings.HasPrefix(AuthMess, "AUTH_SUCCED:") {
+		fmt.Print(AuthMess + "\n")
+	} else if strings.HasPrefix(AuthMess, "AUTH_FAIL:") {
+		fmt.Print(AuthMess + "\n")
+	}
+	//
 	for {
-		fmt.Printf("Your current position: \n")
-		Xresponse, _ := serverReader.ReadString('\n')
-		fmt.Print("X= ", Xresponse)
-
-		Yresponse, _ := serverReader.ReadString('\n')
-		fmt.Print("Y= ", Yresponse)
-
-		//Enter Player X and Y
-		XMessage, _ := serverReader.ReadString('\n')
-		fmt.Print("Server: " + XMessage)
-		X, _ := reader.ReadString('\n')
-
-		if strings.TrimSpace(X) == "stop" {
-			fmt.Println("Game over. Exiting.")
-			break
-		}
-
-		conn.Write([]byte(strings.TrimSpace(X) + "\n"))
+		fmt.Print("Enter player coordinate x moves: ")
+		X, _ := reader.ReadString('\n')                 //1
+		conn.Write([]byte(strings.TrimSpace(X) + "\n")) //1
 		//
-		YMessage, _ := serverReader.ReadString('\n')
-		fmt.Print("Server: " + YMessage)
-		Y, _ := reader.ReadString('\n')
-
-		if strings.TrimSpace(Y) == "stop" {
-			fmt.Println("Game over. Exiting.")
+		fmt.Print("Enter player coordinate y moves: ")
+		Y, _ := reader.ReadString('\n')                 //2
+		conn.Write([]byte(strings.TrimSpace(Y) + "\n")) //2
+		//
+		ServerMessage1, _ := serverReader.ReadString('\n')
+		fmt.Print(ServerMessage1 + "\n")
+		ServerMessage, _ := serverReader.ReadString('\n')
+		if strings.HasPrefix(ServerMessage, "RESPONSE_POKEMON_CATCH:") {
+			fmt.Print(ServerMessage + "\n")
+		} else if strings.HasPrefix(ServerMessage, "ERROR:") {
+			fmt.Print(ServerMessage + "\n")
+		} else if strings.HasPrefix(ServerMessage, "Exit:") {
+			fmt.Print(ServerMessage + "\n")
 			break
+		} else if strings.HasPrefix(ServerMessage, "INPUT:") {
+			continue
 		}
-
-		conn.Write([]byte(strings.TrimSpace(Y) + "\n"))
-		Response, _ := serverReader.ReadString('\n')
-		fmt.Print("Server Response: " + Response + "\n")
-
-		CapResponse, _ := serverReader.ReadString('\n')
-		fmt.Print("Server Response: pokemons Capture " + CapResponse)
-
 	}
 
 }

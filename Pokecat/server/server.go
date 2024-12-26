@@ -2,11 +2,11 @@ package main
 
 import (
 	"bufio"
-	"math/rand/v2"
 
 	// "encoding/json"
 	"fmt"
 	"net"
+	"net-centric_pokemons/Db"
 	"strconv"
 	"strings"
 )
@@ -41,17 +41,14 @@ func handleConnection(conn net.Conn) {
 	fmt.Println("New client connected:", ClientConnect)
 	//
 	saveLinksToJSON(p, "rand50Pokemons.json")
+	// Create players
+	var Playerarr []Db.Player
+	Player1, Player2, Player3 := Db.PlayerDb()
+	Playerarr = append(Playerarr, Player1, Player2, Player3)
 	//
-	Player := NewPlayer{
-		Username: "player1",
-		Password: "123",
-		PlayerCoordinate: NewPlayerCoordinate{
-			PlayerX: rand.IntN(1000),
-			PlayerY: rand.IntN(1000),
-		},
-	}
 	reader := bufio.NewReader(conn)
 	//clasify username and password
+	//username
 	username, err := reader.ReadString('\n')
 	if err != nil {
 		fmt.Println("Error reading username:", err)
@@ -59,6 +56,7 @@ func handleConnection(conn net.Conn) {
 		return
 	}
 	username = strings.TrimSpace(username)
+	//password
 	password, err := reader.ReadString('\n')
 	if err != nil {
 		fmt.Println("Error reading username:", err)
@@ -66,41 +64,55 @@ func handleConnection(conn net.Conn) {
 		return
 	}
 	password = strings.TrimSpace(password)
-	if username != Player.Username || password != Player.Password {
-		fmt.Printf("Invalid. Connection closed.\n")
-		conn.Write([]byte("AUTH_FAIL: Invalid credentials. Connection closed.\n"))
-		return
+	var Player *Db.Player
+	for _, player := range Playerarr {
+		if username == player.Username {
+			if password == player.Password {
+				fmt.Printf("You are connected to the server as %s.\n", player.Username)
+				conn.Write([]byte("AUTH_SUCCED: valid password. Connection as " + player.Username + "\n"))
+				Player = &player
+				break
+			} else {
+				fmt.Printf("Invalid password. Connection closed.\n")
+				conn.Write([]byte("AUTH_FAIL: Invalid password. Connection closed.\n"))
+				return
+			}
+		}
 	}
-	conn.Write([]byte("AUTH_SUCCESS: Welcome to pokemons! \n"))
+	conn.Write([]byte(strconv.Itoa(Player.PlayerCoordinate.PlayerX) + "\n"))
+	conn.Write([]byte(strconv.Itoa(Player.PlayerCoordinate.PlayerY) + "\n"))
+	conn.Write([]byte("Welcome to pokemons! \n"))
 	fmt.Println("User authenticated successfully.")
 
 	fmt.Println(Player)
-	conn.Write([]byte(strconv.Itoa(Player.PlayerCoordinate.PlayerX) + "\n"))
-	conn.Write([]byte(strconv.Itoa(Player.PlayerCoordinate.PlayerY) + "\n"))
+	savePlayersToJSON(Player, "Player.json")
 
 	for {
-		conn.Write([]byte("INPUTX: Enter player coordinate x moves:\n"))
-		playerXStr, _ := reader.ReadString('\n')
-		playerXStr = strings.TrimSpace(playerXStr)
+		conn.Write([]byte("INPUT: Input your coordinate \n"))
+		playerXStr, _ := reader.ReadString('\n')   //1
+		playerXStr = strings.TrimSpace(playerXStr) //1
 		//
-		conn.Write([]byte("INPUTY: Enter player coordinate y moves:\n"))
-		playerYStr, _ := reader.ReadString('\n')
-		playerYStr = strings.TrimSpace(playerYStr)
+		playerYStr, _ := reader.ReadString('\n')   //2
+		playerYStr = strings.TrimSpace(playerYStr) //2
 		//stop condition
-		if playerXStr == "stop" || playerYStr == "stop" {
+		if playerXStr == "stop" && playerYStr == "stop" {
+			conn.Write([]byte("Exit: Exit program\n"))
+			fmt.Printf("Server disconnect \n")
 			break
 		}
-		//convert string to int coordinate from clients
+		ReadJSONFile("Player.json", &Player)
 		playerX, err := strconv.Atoi(playerXStr)
 		if err != nil {
 			conn.Write([]byte("ERROR: Invalid input X, please send a coordinate X number.\n"))
 			continue
 		}
+
 		playerY, err := strconv.Atoi(playerYStr)
 		if err != nil {
 			conn.Write([]byte("ERROR: Invalid input Y, please send a coordinate Y number.\n"))
 			continue
 		}
+
 		//Condition
 		if playerX > 1000 || playerX < 0 || playerY > 1000 || playerY < 0 {
 			conn.Write([]byte("ERROR: Invalid input, please send a coordinate number less than 1000 and more than 0.\n"))
@@ -109,17 +121,18 @@ func handleConnection(conn net.Conn) {
 		//func
 		for i := 0; i < 50; i++ {
 			if playerX == p[i].Coordinates.X && playerY == p[i].Coordinates.Y {
-				conn.Write([]byte("RESPONSE: You have catch pokemon "))
-				conn.Write([]byte(p[i].Name))
+				conn.Write([]byte("RESPONSE_POKEMON_CATCH: You have catch pokemon " + p[i].Name + "\n"))
 				Player.PlayerCoordinate.PlayerX = playerX
 				Player.PlayerCoordinate.PlayerY = playerY
 				Player.CapturedPokemons = append(Player.CapturedPokemons, p[i].Name)
 				break
 			}
 		}
-		conn.Write([]byte("Status: Your current pokemons." + Player.CapturedPokemons[0] + "\n"))
-		fmt.Println(Player)
 
+		Player.PlayerCoordinate.PlayerX = playerX
+		Player.PlayerCoordinate.PlayerY = playerY
+		savePlayersToJSON(Player, "Player.json")
+		fmt.Println(Player)
 	}
 
 }

@@ -1,24 +1,56 @@
 [
   {
-    "id": "0585",
-    "name": "Deerling",
-    "exp": "67",
-    "hp": "0",
+    "id": "0717",
+    "name": "Yveltal",
+    "exp": "340",
+    "hp": "3",
     "attack": "0",
     "defense": "0",
     "sp_attack": "0",
     "sp_defense": "0",
-    "speed": "1",
-    "total_evs": "1",
+    "speed": "0",
+    "total_evs": "3",
     "coordinates": {
-      "x": 578,
-      "y": 596
+      "x": 622,
+      "y": 911
     }
   },
   {
-    "id": "0039",
-    "name": "Jigglypuff",
-    "exp": "95",
+    "id": "0776",
+    "name": "Turtonator",
+    "exp": "170",
+    "hp": "0",
+    "attack": "0",
+    "defense": "2",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 311,
+      "y": 247
+    }
+  },
+  {
+    "id": "0209",
+    "name": "Snubbull",
+    "exp": "60",
+    "hp": "0",
+    "attack": "1",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 945,
+      "y": 644
+    }
+  },
+  {
+    "id": "0115",
+    "name": "Kangaskhan",
+    "exp": "172",
     "hp": "2",
     "attack": "0",
     "defense": "0",
@@ -27,45 +59,93 @@
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 716,
-      "y": 451
+      "x": 698,
+      "y": 50
     }
   },
   {
-    "id": "0359",
-    "name": "Absol",
-    "exp": "163",
+    "id": "0753",
+    "name": "Fomantis",
+    "exp": "50",
     "hp": "0",
-    "attack": "2",
+    "attack": "1",
     "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 614,
+      "y": 355
+    }
+  },
+  {
+    "id": "0250",
+    "name": "Ho-Oh",
+    "exp": "340",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "3",
+    "speed": "0",
+    "total_evs": "3",
+    "coordinates": {
+      "x": 376,
+      "y": 750
+    }
+  },
+  {
+    "id": "0544",
+    "name": "Whirlipede",
+    "exp": "126",
+    "hp": "0",
+    "attack": "0",
+    "defense": "2",
     "sp_attack": "0",
     "sp_defense": "0",
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 451,
-      "y": 640
+      "x": 144,
+      "y": 342
     }
   },
   {
-    "id": "0172",
-    "name": "Pichu",
-    "exp": "41",
+    "id": "0712",
+    "name": "Bergmite",
+    "exp": "61",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 67,
+      "y": 133
+    }
+  },
+  {
+    "id": "0575",
+    "name": "Gothorita",
+    "exp": "137",
     "hp": "0",
     "attack": "0",
     "defense": "0",
     "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "1",
-    "total_evs": "1",
+    "sp_defense": "2",
+    "speed": "0",
+    "total_evs": "2",
     "coordinates": {
-      "x": 735,
-      "y": 557
+      "x": 300,
+      "y": 413
     }
   },
   {
-    "id": "0760",
-    "name": "Bewear",
+    "id": "0217",
+    "name": "Ursaring",
     "exp": "175",
     "hp": "0",
     "attack": "2",
@@ -75,78 +155,62 @@
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 458,
-      "y": 160
+      "x": 225,
+      "y": 537
     }
   },
   {
-    "id": "0587",
-    "name": "Emolga",
-    "exp": "150",
+    "id": "0553",
+    "name": "Krookodile",
+    "exp": "260",
     "hp": "0",
-    "attack": "0",
+    "attack": "3",
     "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "2",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 577,
-      "y": 665
-    }
-  },
-  {
-    "id": "1003",
-    "name": "Ting-Lu",
-    "exp": "285",
-    "hp": "0",
-    "attack": "0",
-    "defense": "3",
     "sp_attack": "0",
     "sp_defense": "0",
     "speed": "0",
     "total_evs": "3",
     "coordinates": {
-      "x": 651,
-      "y": 588
+      "x": 715,
+      "y": 361
     }
   },
   {
-    "id": "0265",
-    "name": "Wurmple",
-    "exp": "56",
-    "hp": "1",
-    "attack": "0",
+    "id": "0555",
+    "name": "DarmanitanStandard Mode",
+    "exp": "168",
+    "hp": "0",
+    "attack": "2",
     "defense": "0",
     "sp_attack": "0",
     "sp_defense": "0",
     "speed": "0",
-    "total_evs": "1",
+    "total_evs": "2",
     "coordinates": {
-      "x": 109,
-      "y": 166
+      "x": 171,
+      "y": 510
     }
   },
   {
-    "id": "0153",
-    "name": "Bayleef",
-    "exp": "142",
+    "id": "0952",
+    "name": "Scovillain",
+    "exp": "170",
     "hp": "0",
-    "attack": "0",
-    "defense": "1",
+    "attack": "2",
+    "defense": "0",
     "sp_attack": "0",
-    "sp_defense": "1",
+    "sp_defense": "0",
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 744,
-      "y": 140
+      "x": 359,
+      "y": 574
     }
   },
   {
-    "id": "0328",
-    "name": "Trapinch",
-    "exp": "58",
+    "id": "0708",
+    "name": "Phantump",
+    "exp": "62",
     "hp": "0",
     "attack": "1",
     "defense": "0",
@@ -154,271 +218,15 @@
     "sp_defense": "0",
     "speed": "0",
     "total_evs": "1",
-    "coordinates": {
-      "x": 681,
-      "y": 189
-    }
-  },
-  {
-    "id": "0729",
-    "name": "Brionne",
-    "exp": "147",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "2",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 682,
-      "y": 296
-    }
-  },
-  {
-    "id": "0542",
-    "name": "Leavanny",
-    "exp": "250",
-    "hp": "0",
-    "attack": "3",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 231,
-      "y": 635
-    }
-  },
-  {
-    "id": "1010",
-    "name": "Iron Leaves",
-    "exp": "295",
-    "hp": "0",
-    "attack": "3",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 755,
-      "y": 767
-    }
-  },
-  {
-    "id": "0998",
-    "name": "Baxcalibur",
-    "exp": "300",
-    "hp": "0",
-    "attack": "3",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 101,
-      "y": 724
-    }
-  },
-  {
-    "id": "0020",
-    "name": "Raticate",
-    "exp": "145",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "2",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 288,
-      "y": 991
-    }
-  },
-  {
-    "id": "0141",
-    "name": "Kabutops",
-    "exp": "173",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 407,
-      "y": 412
-    }
-  },
-  {
-    "id": "0517",
-    "name": "Munna",
-    "exp": "58",
-    "hp": "1",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "1",
-    "coordinates": {
-      "x": 647,
-      "y": 960
-    }
-  },
-  {
-    "id": "0876",
-    "name": "IndeedeeFemale",
-    "exp": "166",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "2",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 956,
-      "y": 183
-    }
-  },
-  {
-    "id": "0628",
-    "name": "Braviary",
-    "exp": "179",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 384,
-      "y": 487
-    }
-  },
-  {
-    "id": "0675",
-    "name": "Pangoro",
-    "exp": "173",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 398,
-      "y": 293
-    }
-  },
-  {
-    "id": "0192",
-    "name": "Sunflora",
-    "exp": "149",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "2",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 979,
-      "y": 640
-    }
-  },
-  {
-    "id": "0384",
-    "name": "Rayquaza",
-    "exp": "340",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "1",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 717,
-      "y": 618
-    }
-  },
-  {
-    "id": "0670",
-    "name": "FloetteEternal Flower",
-    "exp": "243",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "2",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 726,
-      "y": 770
-    }
-  },
-  {
-    "id": "0961",
-    "name": "Wugtrio",
-    "exp": "149",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "2",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 344,
-      "y": 963
-    }
-  },
-  {
-    "id": "0818",
-    "name": "Inteleon",
-    "exp": "265",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "3",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 24,
-      "y": 797
-    }
-  },
-  {
-    "id": "1006",
-    "name": "Iron Valiant",
-    "exp": "295",
-    "hp": "0",
-    "attack": "3",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
     "coordinates": {
       "x": 103,
-      "y": 265
+      "y": 689
     }
   },
   {
-    "id": "0588",
-    "name": "Karrablast",
-    "exp": "63",
+    "id": "0371",
+    "name": "Bagon",
+    "exp": "60",
     "hp": "0",
     "attack": "1",
     "defense": "0",
@@ -427,136 +235,40 @@
     "speed": "0",
     "total_evs": "1",
     "coordinates": {
-      "x": 580,
-      "y": 134
+      "x": 454,
+      "y": 961
     }
   },
   {
-    "id": "0691",
-    "name": "Dragalge",
-    "exp": "173",
+    "id": "0263",
+    "name": "Zigzagoon",
+    "exp": "56",
     "hp": "0",
     "attack": "0",
     "defense": "0",
     "sp_attack": "0",
-    "sp_defense": "2",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 506,
-      "y": 888
-    }
-  },
-  {
-    "id": "0284",
-    "name": "Masquerain",
-    "exp": "159",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "1",
-    "sp_defense": "1",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 800,
-      "y": 462
-    }
-  },
-  {
-    "id": "0720",
-    "name": "HoopaHoopa Unbound",
-    "exp": "340",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "3",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 406,
-      "y": 71
-    }
-  },
-  {
-    "id": "0153",
-    "name": "Bayleef",
-    "exp": "142",
-    "hp": "0",
-    "attack": "0",
-    "defense": "1",
-    "sp_attack": "0",
-    "sp_defense": "1",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 177,
-      "y": 731
-    }
-  },
-  {
-    "id": "0871",
-    "name": "Pincurchin",
-    "exp": "152",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 523,
-      "y": 464
-    }
-  },
-  {
-    "id": "0649",
-    "name": "Genesect",
-    "exp": "300",
-    "hp": "0",
-    "attack": "1",
-    "defense": "0",
-    "sp_attack": "1",
     "sp_defense": "0",
     "speed": "1",
-    "total_evs": "3",
+    "total_evs": "1",
     "coordinates": {
-      "x": 767,
-      "y": 611
+      "x": 5,
+      "y": 626
     }
   },
   {
-    "id": "0559",
-    "name": "Scraggy",
-    "exp": "70",
+    "id": "0883",
+    "name": "Arctovish",
+    "exp": "177",
     "hp": "0",
-    "attack": "1",
-    "defense": "0",
+    "attack": "0",
+    "defense": "2",
     "sp_attack": "0",
     "sp_defense": "0",
     "speed": "0",
-    "total_evs": "1",
+    "total_evs": "2",
     "coordinates": {
-      "x": 979,
-      "y": 84
-    }
-  },
-  {
-    "id": "0169",
-    "name": "Crobat",
-    "exp": "268",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "3",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 935,
-      "y": 127
+      "x": 759,
+      "y": 200
     }
   },
   {
@@ -571,30 +283,14 @@
     "speed": "0",
     "total_evs": "1",
     "coordinates": {
-      "x": 205,
-      "y": 741
+      "x": 816,
+      "y": 450
     }
   },
   {
-    "id": "0469",
-    "name": "Yanmega",
-    "exp": "180",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 104,
-      "y": 313
-    }
-  },
-  {
-    "id": "0180",
-    "name": "Flaaffy",
-    "exp": "128",
+    "id": "0857",
+    "name": "Hattrem",
+    "exp": "130",
     "hp": "0",
     "attack": "0",
     "defense": "0",
@@ -603,14 +299,14 @@
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 439,
-      "y": 341
+      "x": 493,
+      "y": 623
     }
   },
   {
-    "id": "0774",
-    "name": "MiniorAll Core Forms",
-    "exp": "175",
+    "id": "0323",
+    "name": "Camerupt",
+    "exp": "161",
     "hp": "0",
     "attack": "1",
     "defense": "0",
@@ -619,141 +315,29 @@
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 360,
-      "y": 838
+      "x": 598,
+      "y": 67
     }
   },
   {
-    "id": "0716",
-    "name": "Xerneas",
-    "exp": "340",
-    "hp": "3",
+    "id": "0658",
+    "name": "Greninja",
+    "exp": "265",
+    "hp": "0",
     "attack": "0",
     "defense": "0",
     "sp_attack": "0",
     "sp_defense": "0",
-    "speed": "0",
+    "speed": "3",
     "total_evs": "3",
     "coordinates": {
-      "x": 796,
-      "y": 79
+      "x": 34,
+      "y": 571
     }
   },
   {
-    "id": "0483",
-    "name": "Dialga",
-    "exp": "340",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "3",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 425,
-      "y": 709
-    }
-  },
-  {
-    "id": "0702",
-    "name": "Dedenne",
-    "exp": "151",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "2",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 232,
-      "y": 222
-    }
-  },
-  {
-    "id": "0379",
-    "name": "Registeel",
-    "exp": "290",
-    "hp": "0",
-    "attack": "0",
-    "defense": "2",
-    "sp_attack": "0",
-    "sp_defense": "1",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 924,
-      "y": 880
-    }
-  },
-  {
-    "id": "0274",
-    "name": "Nuzleaf",
-    "exp": "119",
-    "hp": "0",
-    "attack": "2",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 265,
-      "y": 168
-    }
-  },
-  {
-    "id": "0792",
-    "name": "Lunala",
-    "exp": "340",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "3",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "3",
-    "coordinates": {
-      "x": 463,
-      "y": 277
-    }
-  },
-  {
-    "id": "0999",
-    "name": "Gimmighoul",
-    "exp": "60",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "1",
-    "sp_defense": "0",
-    "speed": "0",
-    "total_evs": "1",
-    "coordinates": {
-      "x": 148,
-      "y": 868
-    }
-  },
-  {
-    "id": "0496",
-    "name": "Servine",
-    "exp": "145",
-    "hp": "0",
-    "attack": "0",
-    "defense": "0",
-    "sp_attack": "0",
-    "sp_defense": "0",
-    "speed": "2",
-    "total_evs": "2",
-    "coordinates": {
-      "x": 633,
-      "y": 565
-    }
-  },
-  {
-    "id": "0375",
-    "name": "Metang",
+    "id": "0783",
+    "name": "Hakamo-o",
     "exp": "147",
     "hp": "0",
     "attack": "0",
@@ -763,56 +347,472 @@
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 482,
-      "y": 961
+      "x": 202,
+      "y": 180
     }
   },
   {
-    "id": "0462",
-    "name": "Magnezone",
-    "exp": "268",
-    "hp": "0",
+    "id": "0498",
+    "name": "Tepig",
+    "exp": "62",
+    "hp": "1",
     "attack": "0",
     "defense": "0",
-    "sp_attack": "3",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 476,
+      "y": 905
+    }
+  },
+  {
+    "id": "0984",
+    "name": "Great Tusk",
+    "exp": "285",
+    "hp": "0",
+    "attack": "3",
+    "defense": "0",
+    "sp_attack": "0",
     "sp_defense": "0",
     "speed": "0",
     "total_evs": "3",
     "coordinates": {
-      "x": 610,
-      "y": 523
+      "x": 825,
+      "y": 396
     }
   },
   {
-    "id": "0303",
-    "name": "Mawile",
-    "exp": "133",
+    "id": "0345",
+    "name": "Lileep",
+    "exp": "71",
     "hp": "0",
-    "attack": "1",
-    "defense": "1",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "1",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 853,
+      "y": 881
+    }
+  },
+  {
+    "id": "0864",
+    "name": "Cursola",
+    "exp": "179",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "2",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 947,
+      "y": 522
+    }
+  },
+  {
+    "id": "0828",
+    "name": "Thievul",
+    "exp": "159",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "2",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 404,
+      "y": 859
+    }
+  },
+  {
+    "id": "0455",
+    "name": "Carnivine",
+    "exp": "159",
+    "hp": "0",
+    "attack": "2",
+    "defense": "0",
     "sp_attack": "0",
     "sp_defense": "0",
     "speed": "0",
     "total_evs": "2",
     "coordinates": {
-      "x": 329,
-      "y": 998
+      "x": 618,
+      "y": 986
     }
   },
   {
-    "id": "0585",
-    "name": "Deerling",
-    "exp": "67",
+    "id": "0514",
+    "name": "Simisear",
+    "exp": "174",
     "hp": "0",
     "attack": "0",
     "defense": "0",
     "sp_attack": "0",
     "sp_defense": "0",
-    "speed": "1",
+    "speed": "2",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 841,
+      "y": 435
+    }
+  },
+  {
+    "id": "0106",
+    "name": "Hitmonlee",
+    "exp": "159",
+    "hp": "0",
+    "attack": "2",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 742,
+      "y": 549
+    }
+  },
+  {
+    "id": "0410",
+    "name": "Shieldon",
+    "exp": "70",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
     "total_evs": "1",
     "coordinates": {
-      "x": 991,
-      "y": 886
+      "x": 437,
+      "y": 976
+    }
+  },
+  {
+    "id": "0755",
+    "name": "Morelull",
+    "exp": "57",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "1",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 552,
+      "y": 323
+    }
+  },
+  {
+    "id": "0778",
+    "name": "Mimikyu",
+    "exp": "167",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "2",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 14,
+      "y": 327
+    }
+  },
+  {
+    "id": "0619",
+    "name": "Mienfoo",
+    "exp": "70",
+    "hp": "0",
+    "attack": "1",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 310,
+      "y": 93
+    }
+  },
+  {
+    "id": "0946",
+    "name": "Bramblin",
+    "exp": "55",
+    "hp": "0",
+    "attack": "1",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 865,
+      "y": 901
+    }
+  },
+  {
+    "id": "0245",
+    "name": "Suicune",
+    "exp": "290",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "2",
+    "speed": "0",
+    "total_evs": "3",
+    "coordinates": {
+      "x": 443,
+      "y": 711
+    }
+  },
+  {
+    "id": "0571",
+    "name": "Zoroark",
+    "exp": "179",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "2",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 440,
+      "y": 124
+    }
+  },
+  {
+    "id": "0214",
+    "name": "Heracross",
+    "exp": "175",
+    "hp": "0",
+    "attack": "2",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 44,
+      "y": 503
+    }
+  },
+  {
+    "id": "0733",
+    "name": "Toucannon",
+    "exp": "243",
+    "hp": "0",
+    "attack": "3",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "3",
+    "coordinates": {
+      "x": 468,
+      "y": 120
+    }
+  },
+  {
+    "id": "0104",
+    "name": "Cubone",
+    "exp": "64",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 116,
+      "y": 990
+    }
+  },
+  {
+    "id": "0028",
+    "name": "Sandslash",
+    "exp": "158",
+    "hp": "0",
+    "attack": "0",
+    "defense": "2",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 835,
+      "y": 350
+    }
+  },
+  {
+    "id": "0128",
+    "name": "TaurosPaldean FormAqua Breed",
+    "exp": "172",
+    "hp": "0",
+    "attack": "2",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 510,
+      "y": 45
+    }
+  },
+  {
+    "id": "0245",
+    "name": "Suicune",
+    "exp": "290",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "2",
+    "speed": "0",
+    "total_evs": "3",
+    "coordinates": {
+      "x": 188,
+      "y": 50
+    }
+  },
+  {
+    "id": "0273",
+    "name": "Seedot",
+    "exp": "44",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 917,
+      "y": 822
+    }
+  },
+  {
+    "id": "0318",
+    "name": "Carvanha",
+    "exp": "61",
+    "hp": "0",
+    "attack": "1",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 437,
+      "y": 490
+    }
+  },
+  {
+    "id": "0036",
+    "name": "Clefable",
+    "exp": "242",
+    "hp": "3",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "3",
+    "coordinates": {
+      "x": 738,
+      "y": 940
+    }
+  },
+  {
+    "id": "0111",
+    "name": "Rhyhorn",
+    "exp": "69",
+    "hp": "0",
+    "attack": "0",
+    "defense": "1",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 180,
+      "y": 802
+    }
+  },
+  {
+    "id": "0249",
+    "name": "Lugia",
+    "exp": "340",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "3",
+    "speed": "0",
+    "total_evs": "3",
+    "coordinates": {
+      "x": 787,
+      "y": 826
+    }
+  },
+  {
+    "id": "0187",
+    "name": "Hoppip",
+    "exp": "50",
+    "hp": "0",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "1",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 815,
+      "y": 655
+    }
+  },
+  {
+    "id": "1011",
+    "name": "Dipplin",
+    "exp": "170",
+    "hp": "0",
+    "attack": "0",
+    "defense": "2",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "2",
+    "coordinates": {
+      "x": 367,
+      "y": 854
+    }
+  },
+  {
+    "id": "0440",
+    "name": "Happiny",
+    "exp": "110",
+    "hp": "1",
+    "attack": "0",
+    "defense": "0",
+    "sp_attack": "0",
+    "sp_defense": "0",
+    "speed": "0",
+    "total_evs": "1",
+    "coordinates": {
+      "x": 857,
+      "y": 574
     }
   }
 ]
